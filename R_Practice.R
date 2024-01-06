@@ -181,22 +181,46 @@ ncol(ChickWeight)
 
 
 
-# Edit to display ChickWeight data
-barplot(height=bird_data$value,names=bird_data$name)
-
-
-barplot(height=bird_data$value,names=bird_data$name, col = "red")
-
-
 
 library(ggplot2)
 
-ggplot(bird_data, aes(x = Birds, y = bird_speed, fill= Birds)) + 
-  +   geom_bar(stat = "identity")
+# Create empty plot 
+ggplot(ChickWeight, aes(x= ChickWeight$Time, y = ChickWeight$weight))
 
-ggplot(bird_data, aes(x = Birds, y = bird_speed)) + 
-  +   geom_bar(stat = "identity", fill = "red", col = "black" ) 
+# Add points based on Diet groups
+ggplot(ChickWeight, aes(x= ChickWeight$Time, y = ChickWeight$weight)) +
+  geom_point(aes(col=ChickWeight$Diet))
 
-ggplot(bird_data, aes(x = Birds, y = bird_speed, fill= Birds)) + 
-  +   geom_bar(stat = "identity") +
-  +   scale_fill_manual(values = c("red","blue","green","orange","pink"))
+# Change Titles
+ggplot(ChickWeight, aes(x= Time, y = weight)) +
+  geom_point(aes(col= Diet)) + 
+  labs(x = "Time", y = "Weight", title = "Chick Weight over Time by Diet") 
+  
+# Facet by each group (Diet) and adjust title 
+ggplot(ChickWeight, aes(x= ChickWeight$Time, y = ChickWeight$weight)) +
+  geom_point(aes(col=ChickWeight$Diet)) +
+  facet_grid(. ~ Diet) +
+  labs(x = "Time", y = "Weight", title = "Chick Weight over Time by Diet", col = "Diet") +
+  theme(plot.title = element_text(hjust=0.5, color="black", size=20, face="bold")) 
+
+
+# Add linear regression using geom_smooth()
+ggplot(ChickWeight, aes(x= Time, y = weight)) +
+  geom_point(aes(col=Diet)) +
+  facet_grid(. ~ Diet) +
+  labs(x = "Time", y = "Weight", title = "Chick Weight over Time by Diet", col = "Diet") +
+  theme(plot.title = element_text(hjust=0.5, color="black", size=20, face="bold")) +
+  geom_smooth(method='lm')
+
+#save last plot to working directory
+ggsave('my_plot.pdf')
+  
+
+  
+  
+  
+  
+  
+
+     
+
