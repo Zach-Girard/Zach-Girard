@@ -1,5 +1,16 @@
+getwd()
+setwd("~/Documents/GitHub/Zach-Girard")
+list.files()
+
+
+# See help documentation for a function
+?print()
 print("Hello World")
 
+
+
+
+# Assign variable values and do math
 x <- 1
 y <- x + 1
 y
@@ -7,20 +18,78 @@ z <- x + y
 z
 
 
-for(i in 1:5){
-  print(i)
-}
 
+# Creates a vector of integers between two numbers
+A <- 1:10
+# See the Structure of the vector
+str(A)
+# See the Class of the vector
+class(A)
 
-
-
-
+# Creates a vector using elements separated by commas
 vect_1 <- c(1,2,3,4,5)
 
+str(vect_1)
+class(vect_1)
+
+# Create vector of a specified number of numeric values
+vect_2 <- numeric(5)
+str(vect_2)
+class(vect_2)
+
+#Creates a vector between two numbers, with a specified interval between each element.
+B <- seq(2,8,by = 2) 
+B
+
+# Creates a vector of given elements repeated a number of times.
+C <- rep(2,8,times = 4)
+C
+
+# Creates a vector of given elements repeating each element a number of times.
+D < - rep(2,8,each = 3)
+D
 
 
+my_vector <- rnorm(10,5)
+my_vector
+
+sort(my_vector) #Returns my_vector sorted
+rev(my_vector) #Reverses the order of my_vector
+table(my_vector) #Count the values in a vector
+unique(my_vector) #Distinct elements in a vector
+
+my_vector[6]  #Returns the sixth element of my_vector
+my_vector[-6]  #Returns all but the sixth element
+my_vector[2:6]  #Returns elements two to six
+my_vector[-(2:6)] #Returns all elements except those between the second and the sixth
+my_vector[c(2,6)]  #Returns the second and sixth elements
+
+log(x) # Returns the logarithm of a variable
+exp(x) # Returns exponential of a variable
+max(my_vector) # Returns the maximum value of a vector
+min(my_vector) # Returns the minimum value of a vector
+mean(my_vector)  # Returns the mean of a vector
+sum(my_vector)  # Returns the sum of a vector
+median(my_vector)  #Returns the median of a vector
+quantile(my_vector) #Percentage quantiles of a vector
+round(my_vector, 2)  #Round to n decimal places
+rank(my_vector)  #Rank of elements in a vector
+signif(my_vector, 3)  # Round off n significant figures
+var(my_vector)  # Variance of a vector
+my_vector2 <- rnorm(10,5)
+cor(my_vector, my_vector2)  # Correlation between two vectors
+sd(my_vector) # Standard deviation of a vector
+
+# For use in for loops
+my_vector[x == 5]  #Returns elements equal to 5
+my_vector[x < 5 ]  #Returns elements less than 5
+my_vector[x %in% c(2, 5 ,8 )]  #Returns elements in the set {2, 5, 8} 
+
+
+
+# For loop to do math. Assign values of one vector using calculation with values of another vector
 for(num in vect_1){
-  +   vect_2 = c(vect_2, num * 10) 
+     vect_2[num] = num * 10 
   }
 vect_2
 
@@ -71,19 +140,52 @@ dt_3 <- data.table("A" = rnorm(5), "B" = rpois(5,5), "C"= rbinom(5,2,0.6))
 dt_3
 
 
+#This creates the data frame df, seen below
+df <- data.frame(x = 1:3, y = c("h", "i", "j"), z = 12:14)
+df
+
+#This selects all columns of the third row
+df[3, ]
 
 
-bird_speed <- rpois(5,5)
-Birds <- c("Bluebird","Hawk","Sparrow","Robin","Eagle")
-bird_data <- data.frame(name=Birds,value=bird_speed)
+#This selects the column z
+df$z
+
+
+#This selects all rows of the second column
+df[ ,2]
+
+#This selects the third column of the second row
+df[2,3]
+
+
+# See list of built-in datasets in R
+data()
+
+# Import dataset to Environment
+data(ChickWeight)
+
+# See first 5 rows of table
+head(ChickWeight, 5)
+
+# See # of rows
+nrow(ChickWeight)
+
+# See # of columns
+ncol(ChickWeight)
 
 
 
+
+
+
+
+
+# Edit to display ChickWeight data
 barplot(height=bird_data$value,names=bird_data$name)
 
 
 barplot(height=bird_data$value,names=bird_data$name, col = "red")
-
 
 
 
