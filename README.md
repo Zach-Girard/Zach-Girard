@@ -1,7 +1,7 @@
 - 👋 Hello World, I’m @Zach-Girard
 - 👀 I’m interested in Genomics and Bioinformatics!
 - 🌱 I’m currently on working R, Bash, and Python programming for Computational Biology.
-- 💞️ I’m looking to collaborate on Genomics/Bioinformatics scripts.
+
 
 
 <!---
