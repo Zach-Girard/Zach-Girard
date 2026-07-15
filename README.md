@@ -10,7 +10,7 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 
 | Category | Tools |
 |---|---|
-| Languages | Python, R, Bash |
+| Languages | Python, R, Bash, SQL |
 | Workflow / orchestration | Nextflow, Snakemake, SLURM, LSF, conda |
 | NGS tools | STAR / STARsolo, BWA, GATK4, salmon, samtools, bcftools, cutadapt, Trimmomatic, FastQC, fastp, htseq-count, ArchR, MultiQC |
 | Analysis / reporting | R Markdown, DESeq2, tximport, pandas, matplotlib |
@@ -24,5 +24,6 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 - 🔁 [**Deduper**](https://github.com/Zach-Girard/Deduper-Zach-Girard) — memory-efficient, UMI-aware PCR duplicate removal for sorted SAM files
 - 🔀 [**Demultiplex**](https://github.com/Zach-Girard/Demultiplex) — from-scratch FASTQ demultiplexer with index-hopping detection
 - 🎨 [**motif-mark**](https://github.com/Zach-Girard/motif-mark) — object-oriented tool for visualizing regulatory motifs (incl. degenerate IUPAC codes) on gene models
+- 📚 [**scripting-cookbook**](https://github.com/Zach-Girard/scripting-cookbook) — runnable, CI-tested reference examples for common R/Python/Bash/SQL patterns (dplyr/pandas, regex, joins/CTEs/window functions, and more)
 
 📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/zachary-girard)
