@@ -11,9 +11,9 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 | Category | Tools |
 |---|---|
 | Languages | Python, R, Bash, SQL |
-| Workflow / orchestration | Nextflow, Snakemake, SLURM, LSF, conda |
+| Workflow / Job Management | Nextflow, Snakemake, SLURM, LSF, conda |
 | NGS tools | STAR / STARsolo, BWA, GATK4, salmon, samtools, bcftools, cutadapt, Trimmomatic, FastQC, fastp, htseq-count, ArchR, MultiQC, DESeq2 |
-| Visualization / Reporting | R Markdown, ggplot2, matplotlib |
+| Visualization / Reporting | ggplot2, matplotlib, R Markdown |
 
 #### My projects
 
