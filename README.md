@@ -13,9 +13,9 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 | Languages | Python, R, Bash, SQL |
 | Workflow / orchestration | Nextflow, Snakemake, SLURM, LSF, conda |
 | NGS tools | STAR / STARsolo, BWA, GATK4, salmon, samtools, bcftools, cutadapt, Trimmomatic, FastQC, fastp, htseq-count, ArchR, MultiQC |
-| Analysis / reporting | R Markdown, DESeq2, tximport, pandas, matplotlib |
+| Analysis / reporting | R Markdown, DESeq2, pandas, matplotlib |
 
-#### A few projects
+#### My projects
 
 - 🧬 [**SHARE_seq**](https://github.com/Zach-Girard/SHARE_seq) — end-to-end Nextflow pipeline for SHARE-seq multiome data: demultiplexing, barcode QC, STARsolo (RNA) + BWA/ArchR (ATAC) alignment, sgRNA guide assignment, and automated HTML QC reporting
 - 🧬 [**germline-variant-calling-nf**](https://github.com/Zach-Girard/germline-variant-calling-nf) — Nextflow DSL2 GATK4 Best Practices pipeline (BWA-MEM → MarkDuplicates → BQSR → HaplotypeCaller → hard-filter) for NA12878, benchmarked against a GIAB truth set (precision/recall/F1 ≈ 0.99) rather than just eyeballing the output VCF
