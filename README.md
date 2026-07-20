@@ -11,8 +11,8 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 | Category | Tools |
 |---|---|
 | Languages | Python, R, Bash, SQL |
-| Workflow / Job Management | Nextflow, Snakemake, SLURM, LSF, conda |
-| NGS tools | STAR / STARsolo, BWA, GATK4, salmon, samtools, bcftools, cutadapt, Trimmomatic, FastQC, fastp, htseq-count, ArchR, MultiQC, DESeq2 |
+| Workflow / Job Management | Nextflow, Snakemake, SLURM, LSF, conda, Docker |
+| NGS tools | STAR / STARsolo, BWA, GATK4, salmon, samtools, bcftools, cutadapt, Trimmomatic, FastQC, fastp, htseq-count, ArchR, MultiQC, DESeq2, Seurat |
 | Visualization / Reporting | ggplot2, matplotlib, R Markdown |
 
 #### My projects
@@ -20,6 +20,7 @@ Bioinformatics Analyst focused on genomics and single-cell pipeline development.
 - 🧬 [**SHARE_seq**](https://github.com/Zach-Girard/SHARE_seq) — end-to-end Nextflow pipeline for SHARE-seq multiome data: demultiplexing, barcode QC, STARsolo (RNA) + BWA/ArchR (ATAC) alignment, sgRNA guide assignment, and automated HTML QC reporting
 - 🧬 [**germline-variant-calling-nf**](https://github.com/Zach-Girard/germline-variant-calling-nf) — Nextflow DSL2 GATK4 Best Practices pipeline (BWA-MEM → MarkDuplicates → BQSR → HaplotypeCaller → hard-filter) for NA12878, benchmarked against a GIAB truth set (precision/recall/F1 ≈ 0.99) rather than just eyeballing the output VCF
 - 📊 [**rnaseq-diffexp**](https://github.com/Zach-Girard/rnaseq-diffexp) — reproducible Snakemake pipeline for RNA-seq differential expression (`fastp` → `salmon` → `tximport`/`DESeq2` → R Markdown report), with CI that reruns the full pipeline on every push
+- 🧫 [**seurat-scrna-seq-docker**](https://github.com/Zach-Girard/seurat-scrna-seq-docker) — Dockerized Seurat scRNA-seq pipeline (QC → normalization → clustering → UMAP → marker genes) on the 10x pbmc3k dataset, with CI that builds the image and runs the container end to end on every push
 - 🧪 [**QAA**](https://github.com/Zach-Girard/QAA) — RNA-seq QC and adapter-trimming benchmark, plus splice-aware alignment and `htseq-count` analysis used to empirically determine library strandedness
 - 🔁 [**Deduper**](https://github.com/Zach-Girard/Deduper-Zach-Girard) — memory-efficient, UMI-aware PCR duplicate removal for sorted SAM files
 - 🔀 [**Demultiplex**](https://github.com/Zach-Girard/Demultiplex) — from-scratch FASTQ demultiplexer with index-hopping detection
